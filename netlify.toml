@@ -1,7 +1,7 @@
 [build]
   base = ""
   command = "npm run build:prod"
-  publish = "dist/"
+  publish = "dist/browser"
 
   [[redirects]]
   from = "/*"
