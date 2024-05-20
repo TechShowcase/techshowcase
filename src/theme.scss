@@ -1,25 +1,17 @@
 @use "@angular/material" as mat;
 @use "@angular/material-experimental" as matx;
 
-$light-theme: matx.define-theme(
-  (
-    color: (
-      theme-type: light,
-      primary: matx.$m3-azure-palette,
-      tertiary: matx.$m3-blue-palette,
-    ),
-  )
-);
+$light-theme: matx.define-theme((color: (theme-type: light,
+        primary: matx.$m3-azure-palette,
+        tertiary: matx.$m3-blue-palette,
+      ),
+    ));
 
-$dark-theme: matx.define-theme(
-  (
-    color: (
-      theme-type: dark,
-      primary: matx.$m3-cyan-palette,
-      tertiary: matx.$m3-orange-palette,
-    ),
-  )
-);
+$dark-theme: matx.define-theme((color: (theme-type: dark,
+        primary: matx.$m3-cyan-palette,
+        tertiary: matx.$m3-orange-palette,
+      ),
+    ));
 
 @include mat.core();
 @include matx.color-variants-back-compat($light-theme);
@@ -37,7 +29,7 @@ $dark-theme: matx.define-theme(
   color: #f5f5f5;
 
   a {
-    color: #5149ae;
+    color: #6057c4;
   }
 
   mat-toolbar {
@@ -64,10 +56,13 @@ $dark-theme: matx.define-theme(
   }
 
   mat-card {
-    .actions {
-      a {
-        background-color: #333;
-      }
+    &:hover {
+      box-shadow: 0 0 1rem 0.5rem #5149ae8d;
+    }
+
+    mat-card-subtitle {
+      color: #8d8d8d;
+      font-weight: 400;
     }
   }
 
@@ -85,7 +80,7 @@ $dark-theme: matx.define-theme(
   }
 
   mat-toolbar {
-    box-shadow: 0 0.1rem 0.3rem #0f0f0f51;
+    box-shadow: 0 0.1rem 0.3rem #0f0f0f3d;
 
     .app-logo {
       mat-icon {
@@ -111,6 +106,12 @@ $dark-theme: matx.define-theme(
           }
         }
       }
+    }
+  }
+
+  mat-card {
+    &:hover {
+      box-shadow: 0 0 1rem 0.5rem #00000033;
     }
   }
 
