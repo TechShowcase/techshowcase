@@ -1,5 +1,5 @@
 name: 🐛 Bug report
-description: Create a bug report to help us improve TechHowcase
+description: Create a bug report to help us improve TechShowcase
 title: "Bug: "
 labels: [👀 needs triage, 🐛 bug]
 body:
