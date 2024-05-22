@@ -111,7 +111,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
    git push origin my-fix-branch
    ```
 
-10. In GitHub, send a pull request to `TechShowcase/TechShowcase:main`.
+10. In GitHub, send a pull request to `TechShowcase/techshowcase:main`.
 
 **DO NOT** erase the provided PR template! It is intended for you to use, not to replace it with random text.
 
