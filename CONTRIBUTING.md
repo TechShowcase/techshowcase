@@ -78,7 +78,7 @@ If the chosen issue has already been resolved - no further PRs would be accepted
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-1. Search [TechSHowcase](https://github.com/TechShowcase) for an open or closed PR that relates to your submission.
+1. Search [TechSHowcase](https://github.com/TechShowcase/techshwocase/pulls) for an open or closed PR that relates to your submission.
    You don't want to duplicate existing efforts.
 
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.
@@ -89,7 +89,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 4. In your forked repository, make your changes in a new git branch:
 
    ```shell
-   git checkout -b my-fix-branch develop
+   git checkout -b my-fix-branch main
    ```
 
 5. Create your patch, **including appropriate test cases**.
@@ -132,10 +132,10 @@ After your pull request is merged, you can safely delete your branch and pull th
   git push origin --delete my-fix-branch
   ```
 
-- Check out the develop branch:
+- Check out the main branch:
 
   ```shell
-  git checkout develop -f
+  git checkout main -f
   ```
 
 - Delete the local branch:
@@ -144,10 +144,10 @@ After your pull request is merged, you can safely delete your branch and pull th
   git branch -D my-fix-branch
   ```
 
-- Update your local `develop` with the latest upstream version:
+- Update your local `main` with the latest upstream version:
 
   ```shell
-  git pull --ff upstream develop
+  git pull --ff upstream main
   ```
 
 ## Coding Rules
