@@ -42,7 +42,8 @@ Not all issues are bug fixes! Please understand the difference between a Feature
 - **FEATURE** - when you are implementing something new that has not been worked on before
 - **BUG** - when you are correcting something that has been worked on before but is not functioning as intended
 
-## For all Issues 
+## For all Issues
+
 ### First open an issue and outline your proposal so that it can be discussed.
 
 This process allows us to better coordinate our efforts, prevent duplication of work, and help you to craft the change so that it is successfully accepted into the project.
@@ -67,7 +68,7 @@ Every new issue is tagged with the "needs triage" label, signifying that it requ
 
 ## Before you start working on an Issue
 
-Before commencing work on any issue, it is essential to confirm that it has not already been addressed. 
+Before commencing work on any issue, it is essential to confirm that it has not already been addressed.
 
 Even if the issue is labeled as not implemented, it remains your responsibility to examine the app's codebase and confirm the absence of the issue.
 
