@@ -15,7 +15,8 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 2rem 0;
+    width: 50vw;
+    margin: 3rem auto;
 
     mat-card {
       width: 20rem;
@@ -23,6 +24,24 @@
       &:hover {
         transform: scale(1.01);
         transition: all 0.3s ease-in-out;
+      }
+
+      &.small {
+        width: 10rem;
+
+        mat-card-title {
+          font-size: 1rem;
+        }
+
+        mat-card-subtitle {
+          font-size: 0.9rem;
+        }
+
+        mat-card-content {
+          img {
+            transform: scale(0.8);
+          }
+        }
       }
 
       mat-card-subtitle {
@@ -34,8 +53,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 20rem;
-        height: 16rem;
+
+        // width: 20rem;
+        // height: 16rem;
         padding: 0;
 
         img {

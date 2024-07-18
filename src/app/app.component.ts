@@ -29,9 +29,8 @@ export class AppComponent {
   themeService = inject(ThemeService);
 
   cards = [
-      { title: 'Women In Tech', subTitle: 'Women in Technology', imageSrc: "../assets/images/women-in-tech-logo.png", url: 'https://womenintech.dev' },
-      { title: 'Built With Analog', subTitle: 'Projects Collection', imageSrc: "../assets/images/analog-logo.png", url: 'https://builtwithanalog.dev' },
-      { title: 'Built With Angular', subTitle: 'Personal Resource', imageSrc: "../assets/images/angular-gradient.png", url: 'https://builtwithangular.dev' },
+      { title: 'Women In Tech', subTitle: 'Women in Technology', imageSrc: "../assets/images/women-in-tech-logo.png", url: 'https://womenintech.dev', imgClass: "women-in-tech" },
+      { title: 'Built With Analog', subTitle: 'Projects Collection', imageSrc: "../assets/images/analog-logo.png", url: 'https://builtwithanalog.dev', imgClass: "analog-logo" },
   ];
 
   constructor (private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {

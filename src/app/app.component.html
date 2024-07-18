@@ -13,11 +13,22 @@
               <mat-card-subtitle>{{card.subTitle}}</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
-              <img mat-card-image src="{{card.imageSrc}}" alt="{{card.title}} logo">
+              <img mat-card-image class="{{card.imgClass}}" src="{{card.imageSrc}}" alt="{{card.title}} logo">
             </mat-card-content>
           </mat-card>
         </a>
       }
+      <a href="https://builtwithangular.dev" target="_blank">
+        <mat-card  class="small">
+          <mat-card-header>
+            <mat-card-title>Built with Angular</mat-card-title>
+            <mat-card-subtitle>Personal Resource</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <img mat-card-image class="angular-logo" src="../assets/images/angular-gradient.png" alt="angular logo">
+          </mat-card-content>
+        </mat-card>
+      </a>
     </div>
   </main>
   <mat-toolbar class="footer">
