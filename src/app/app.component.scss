@@ -18,7 +18,7 @@
     margin: 2rem 0;
 
     mat-card {
-      width: 25rem;
+      width: 20rem;
 
       &:hover {
         transform: scale(1.01);
@@ -34,8 +34,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 25rem;
-        height: 22rem;
+        width: 20rem;
+        height: 16rem;
         padding: 0;
 
         img {
@@ -57,7 +57,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.5rem;
     }
     .copyright {
       display: flex;
