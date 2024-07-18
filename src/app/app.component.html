@@ -1,25 +1,31 @@
 <div class="container" [class]="themeService.themeSignal()">
   <mat-toolbar class="header">
-    <a routerLink="/">TechShowcase</a>
+    <a class="logo" routerLink="/">
+      @if (themeService.themeSignal() === 'dark') {
+      <img src="../assets/images/tech-showcase-purple.png" alt="">
+      } @else {
+      <img src="../assets/images/tech-showcase.png" alt="">
+      }
+    </a>
     <mat-slide-toggle checked (click)="toggleTheme()"></mat-slide-toggle>
   </mat-toolbar>
   <main>
     <div class="cards-wrapper">
       @for (card of cards; track card) {
-        <a href="{{card.url}}" target="_blank">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title>{{card.title}}</mat-card-title>
-              <mat-card-subtitle>{{card.subTitle}}</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>
-              <img mat-card-image class="{{card.imgClass}}" src="{{card.imageSrc}}" alt="{{card.title}} logo">
-            </mat-card-content>
-          </mat-card>
-        </a>
+      <a href="{{card.url}}" target="_blank">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{card.title}}</mat-card-title>
+            <mat-card-subtitle>{{card.subTitle}}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <img mat-card-image class="{{card.imgClass}}" src="{{card.imageSrc}}" alt="{{card.title}} logo">
+          </mat-card-content>
+        </mat-card>
+      </a>
       }
       <a href="https://builtwithangular.dev" target="_blank">
-        <mat-card  class="small">
+        <mat-card class="small">
           <mat-card-header>
             <mat-card-title>Built with Angular</mat-card-title>
             <mat-card-subtitle>Personal Resource</mat-card-subtitle>
