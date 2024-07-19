@@ -4,9 +4,11 @@ This repo contains the code for the [techshowcase.dev](https://techshowcase.dev)
 
 [![TechSowcase](./src/assets/images/techshowcase.jpg)](https://techshowcase.dev)
 
-Showcasing projects:
+Showcasing profiles of Women In Tech:
 
-- [builtwithangular.dev](https://builtwithangular.dev)
+- [womenintech.dev](https://womenintech.dev)
+
+Showcasing projects built with AnalogJS:
 
 - [builtwithanalog.dev](https://builtwithanalog.dev)
 
