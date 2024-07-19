@@ -84,7 +84,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.
    Discussing the design upfront helps to ensure that we're ready to accept your work.
 
-3. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `TechShowcase` repo.
+3. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `techshowcase` repo.
 
 4. In your forked repository, make your changes in a new git branch:
 
