@@ -28,6 +28,11 @@ export class AppComponent {
 	title = "TechShwocase";
   themeService = inject(ThemeService);
 
+  cards = [
+      { title: 'Women In Tech', subTitle: 'Women in Technology', imageSrc: "../assets/images/women-in-tech-logo.png", url: 'https://womenintech.dev', imgClass: "women-in-tech" },
+      { title: 'Built With Analog', subTitle: 'Projects Collection', imageSrc: "../assets/images/analog-logo.png", url: 'https://builtwithanalog.dev', imgClass: "analog-logo" },
+  ];
+
   constructor (private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
     this.iconRegistry.addSvgIcon('github', this.sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/github.svg'));
     this.iconRegistry.addSvgIcon('twitter', this.sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/twitter.svg'));
