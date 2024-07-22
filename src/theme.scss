@@ -25,16 +25,26 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
   @include mat.all-component-colors($dark-theme);
 
   background-color: #333;
-  color: #b0bfcb;
+  color: #a2aeb8;
 
   a,
   h1 {
     color: #7692b1;
   }
 
+  h3 {
+    color: #92adcb;
+  }
+
   mat-toolbar {
     background-color: #202020;
     box-shadow: 0 0 0.4rem #000000da;
+
+    button[mat-icon-button] {
+      mat-icon {
+        color: #92adcb;
+      }
+    }
 
     // slide toggle overwrites
     mat-slide-toggle {
@@ -60,9 +70,20 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
   .mat-drawer-container {
     background-color: #343434;
   }
+
   mat-sidenav {
     background-color: #2a2a2a;
     box-shadow: 0 0 0.4rem #000000c9;
+  }
+
+  .links {
+    img {
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0.2rem 0.4rem #6189acd7;
+      }
+    }
   }
 
   mat-card {
@@ -85,7 +106,8 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
 
   .content {
     mat-panel-title {
-      color: #c9bdd0;
+      font-family: "Lato", sans-serif;
+      color: #afc0d2;
     }
   }
 
@@ -101,7 +123,11 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
 
   a,
   h1 {
-    color: #5f8abd;
+    color: #557dad;
+  }
+
+  h3 {
+    color: #5982b4;
   }
 
   button[mat-raised-button] {
@@ -111,6 +137,12 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
   mat-toolbar {
     background-color: #dce3e9;
     box-shadow: 0 0.1rem 0.3rem #0f0f0f2d;
+
+    button[mat-icon-button] {
+      mat-icon {
+        color: #5982b4;
+      }
+    }
 
     // slide toggle overwrites
     mat-slide-toggle {
@@ -130,12 +162,22 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
   }
 
   .mat-drawer-container {
-    background-color: #e9ecf0;
+    background-color: #eff1f3;
   }
 
   mat-sidenav {
-    background-color: #e4e3e3;
+    background-color: #eff1f3;
     box-shadow: 0 0.1rem 0.3rem #0f0f0f2d;
+  }
+
+  .links {
+    img {
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0.2rem 0.4rem #6189acd7;
+      }
+    }
   }
 
   mat-card {
@@ -146,12 +188,19 @@ $dark-theme: mat.define-theme((color: (theme-type: dark,
 
       &:hover {
         background-color: #d9e4e8;
-        border-color: #c1c9d4;
+        border-color: #88abc6;
 
         img {
           box-shadow: 0 0.1rem 0.5rem #00000070;
         }
       }
+    }
+  }
+
+  .content {
+    mat-panel-title {
+      font-family: "Lato", sans-serif;
+      color: #4b73a4;
     }
   }
 

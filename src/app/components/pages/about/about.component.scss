@@ -17,16 +17,17 @@
       margin: 0 0 1.5rem 0;
     }
 
-    h2 {
+    h3 {
       font-size: 1.3rem;
-      font-weight: 500;
+      line-height: 2rem;
+      font-weight: 600;
       text-align: center;
-      margin: 0 0 0.5rem 0;
+      margin: 0 0 1.5rem 0;
     }
 
     p {
       font-size: 1.1rem;
-      line-height: 1.6rem;
+      line-height: 1.7rem;
       text-align: center;
       margin: 0 0 1rem 0;
     }
@@ -42,12 +43,18 @@
       }
     }
 
-    li {
+    .links {
       display: flex;
-      font-size: 1.1rem;
-      line-height: 1.5rem;
-      gap: 0.3rem;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
 
+      img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 0.5rem;
+        object-fit: cover;
+      }
     }
   }
 }

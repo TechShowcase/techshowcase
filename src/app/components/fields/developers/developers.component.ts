@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from "@angular/core";
-import { Profile } from "../../models/profile";
+import { Profile } from "../../../models/profile";
 
 import { MatCardModule } from "@angular/material/card";
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -10,7 +10,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { FormsModule } from "@angular/forms";
-import { ProfileService } from "../../services/profile.service";
+import { ProfileService } from "../../../services/profile.service";
 
 @Component({
 	selector: "app-developers",

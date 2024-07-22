@@ -2,16 +2,35 @@
   <div class="filtering">
     <div class="filtering-actions">
       <mat-form-field>
-        <mat-label>Category</mat-label>
+        <mat-label>Field</mat-label>
         <mat-select [(ngModel)]="selectedField" (selectionChange)="applyFilter()">
           @for (field of fields; track field) {
           <mat-option value="{{field}}">{{field}}</mat-option>
           }
         </mat-select>
       </mat-form-field>
+      <mat-form-field>
+        <mat-label>Technologies</mat-label>
+        <mat-select [(ngModel)]="selectedTech" multiple (selectionChange)="applyFilter()">
+          @for (tech of technologies; track tech) {
+          <mat-option value="{{tech}}">{{tech}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Open Source</mat-label>
+        <mat-select [(ngModel)]="selectedOpenSource" (selectionChange)="applyFilter()">
+          @for (involvement of openSourceInvolvement; track involvement) {
+          <mat-option value="{{involvement}}">{{involvement}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
       <div class="buttons-wrapper">
         <div class="checkboxes-wrapper">
           <mat-checkbox [(ngModel)]="showHandsOnCoding" (change)="applyFilter()">Hands-on Coding</mat-checkbox>
+          @if (selectedOpenSource){
+          <mat-checkbox [(ngModel)]="ossLeadDeveloper" (change)="applyFilter()">OSS Lead Developer</mat-checkbox>
+          }
         </div>
         <button mat-raised-button (click)="clearFilters()"> Clear Filters</button>
       </div>

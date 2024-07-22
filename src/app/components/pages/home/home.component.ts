@@ -34,15 +34,24 @@ export class HomeComponent implements OnInit {
   profiles: Profile[] = [];
   filteredProfiles: Profile[] = [];
   fields: string[] = [];
+  technologies: string[] = [];
+  openSourceInvolvement: any[] = [];
   filterApplied: boolean = false;
   selectedField: string = '';
+  selectedTech: string[] = [];
+  selectedOpenSource: string = '';
   showHandsOnCoding: boolean = false;
+  ossLeadDeveloper: boolean = false;
   http = inject(HttpClient);
 
   ngOnInit(): void {
     this.http.get<Profile[]>("/data/profiles.json").subscribe((profiles) => {
       this.profiles = profiles;
       this.fields = Array.from(new Set(this.profiles.map((profile) => profile.field)));
+      this.technologies = Array.from(new Set(this.profiles.flatMap((profile) => profile.technologies.map((tech) => tech.name  ))));
+      this.openSourceInvolvement = Array.from(new Set(
+        this.profiles.flatMap((profile) => profile.openSource?.map((os) => os.involvementType) || [])
+      )).filter(involvement => involvement);
     });
   }
 
@@ -51,6 +60,9 @@ export class HomeComponent implements OnInit {
     this.filteredProfiles = this.profiles.filter(profile => {
       return (
         (this.selectedField === '' || profile.field === this.selectedField) &&
+        (this.selectedTech.length === 0 || profile.technologies.some(tech => this.selectedTech.includes(tech.name))) &&
+        (this.selectedOpenSource === '' || profile.openSource?.some(os => os.involvementType === this.selectedOpenSource)) &&
+        (!this.ossLeadDeveloper || profile.openSource?.some(os => os.leadDeveloper)) &&
         (!this.showHandsOnCoding || profile.handsOnCoding.some(hoc => hoc.status))
       );
     });
@@ -59,6 +71,9 @@ export class HomeComponent implements OnInit {
   clearFilters(): void {
     this.filterApplied = false;
     this.selectedField = '';
+    this.selectedTech = [];
+    this.selectedOpenSource = '';
+    this.ossLeadDeveloper = false;
     this.showHandsOnCoding = false;
   }
 }

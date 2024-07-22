@@ -12,7 +12,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatIconModule } from "@angular/material/icon";
-import { ThemeService } from "../../services/theme.service";
+import { ThemeService } from "../../../services/theme.service";
 
 @Component({
 	selector: "app-header",
@@ -28,7 +28,6 @@ import { ThemeService } from "../../services/theme.service";
 	styleUrl: "./header.component.scss",
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
-
 	@Output() toggleSidenav = new EventEmitter<void>();
 
 	title = "";
@@ -37,31 +36,31 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 	router = inject(Router);
 	themeService = inject(ThemeService);
 
-  ngOnInit() {
-    // Subscribe to router events to detect route changes
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        let title = '';
-        switch (this.router.url) {
-          case '/':
-            title = 'Software Engineers & Developers';
-            break;
-          case '/open-source':
-            title = 'Open Source Involved';
-            break;
-          case '/developers':
-            title = 'Software Engineers & Developers';
-            break;
-          case '/history':
-            title = 'Throughout History';
-            break;
-          default:
-            title = 'TechShowcase'; // Set a default title if needed
-        }
-        this.title = title;
-      }
-    });
-  }
+	ngOnInit() {
+		// Subscribe to router events to detect route changes
+		this.router.events.subscribe((event) => {
+			if (event instanceof NavigationEnd) {
+				let title = "";
+				switch (this.router.url) {
+					case "/":
+						title = "Main Search";
+						break;
+					case "/developers":
+						title = "Software Engineers & Developers";
+						break;
+					case "/open-source":
+						title = "Open Source Involved";
+						break;
+					case "/history":
+						title = "Throughout History";
+						break;
+					default:
+						title = "TechShowcase"; // Set a default title if needed
+				}
+				this.title = title;
+			}
+		});
+	}
 
 	onToggleSidenav() {
 		this.toggleSidenav.emit();
@@ -79,4 +78,3 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 		this.themeService.updateTheme();
 	}
 }
-
