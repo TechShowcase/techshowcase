@@ -1,0 +1,154 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 2rem 3rem;
+
+  .sub-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 0 0 0.3rem;
+    }
+
+    p {
+      text-align: center;
+      line-height: 1.5rem;
+      width: 60%;
+      margin: 0.5rem 0 2rem;
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .filtering {
+    .filtering-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      .buttons-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .checkboxes-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+        }
+      }
+    }
+
+    .total {
+      text-align: center;
+    }
+  }
+
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+
+    mat-card {
+      width: 20vw;
+      overflow: hidden;
+
+      mat-card-content {
+        .main {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          img {
+            width: 5rem;
+            border-radius: 50%;
+          }
+
+          h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0.3rem 0;
+          }
+
+          h3 {
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0.3rem 0;
+          }
+
+        }
+
+
+        .details {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .info {
+            .main {
+              display: flex;
+              align-items: center;
+
+              mat-icon {
+                color: #36744c;
+              }
+            }
+          }
+
+          .features {
+            display: flex;
+            gap: 0.3rem;
+          }
+        }
+      }
+
+      mat-card-actions {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .content {
+    .sub-heading {
+      p {
+        width: 100%;
+      }
+    }
+
+    .filtering-actions {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .cards-wrapper {
+      flex-direction: column;
+      align-items: center;
+
+      mat-card {
+        width: 90vw;
+      }
+    }
+  }
+}

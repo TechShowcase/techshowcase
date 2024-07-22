@@ -1,13 +1,17 @@
-import { Component, inject } from "@angular/core";
-import { RouterLink, RouterOutlet } from "@angular/router";
-import { ThemeService } from "./services/theme.service";
 
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatCardModule } from "@angular/material/card";
-import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { ChangeDetectorRef, Component, inject, ViewChild } from "@angular/core";
+import { RouterLink, RouterOutlet } from "@angular/router";
+import { HeaderComponent } from "./components/header/header.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { ThemeService } from "./services/theme.service";
+import { DomSanitizer } from "@angular/platform-browser";
+
+import { MatSidenav, MatSidenavModule } from "@angular/material/sidenav";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatListModule } from "@angular/material/list";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
-import { DomSanitizer } from "@angular/platform-browser";
+import { MatCardModule } from "@angular/material/card";
 
 @Component({
 	selector: "app-root",
@@ -15,30 +19,67 @@ import { DomSanitizer } from "@angular/platform-browser";
 	imports: [
 		RouterOutlet,
     RouterLink,
-		MatCardModule,
-		MatToolbarModule,
-		MatSlideToggleModule,
+		HeaderComponent,
+		FooterComponent,
+		MatMenuModule,
+    MatCardModule,
 		MatButtonModule,
-    MatIconModule,
+		MatIconModule,
+		MatSidenavModule,
+		MatListModule,
 	],
 	templateUrl: "./app.component.html",
 	styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-	title = "TechShwocase";
-  themeService = inject(ThemeService);
 
-  cards = [
-      { title: 'Women In Tech', subTitle: 'Women in Technology', imageSrc: "../assets/images/women-in-tech-logo.png", url: 'https://womenintech.dev', imgClass: "women-in-tech" },
-      { title: 'Built With Analog', subTitle: 'Projects Collection', imageSrc: "../assets/images/analog-logo.png", url: 'https://builtwithanalog.dev', imgClass: "analog-logo" },
-  ];
+  @ViewChild('snav') sidenav!: MatSidenav;
 
-  constructor (private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
-    this.iconRegistry.addSvgIcon('github', this.sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/github.svg'));
-    this.iconRegistry.addSvgIcon('twitter', this.sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/twitter.svg'));
-  }
+	title = "techshowcase";
+	themeService = inject(ThemeService);
 
-  toggleTheme() {
-    this.themeService.updateTheme();
-  }
+	navItems = [
+		{ name: "Software Engineers / Developers", route: "/developers", icon: "developer_board"},
+		{ name: "Open Source Involved", route: "/open-source", icon: "developer_board"},
+		{ name: "Data Scientists / Analysts", route: "/developers", icon: "developer_board"},
+		{ name: "Network / Systems Administrators", route: "/developers", icon: "developer_board"},
+		{ name: "Cybersecurity Specialists", route: "/developers", icon: "developer_board"},
+		{ name: "Mentors & Educators", route: "/developers", icon: "developer_board"},
+		{ name: "Content Creators", route: "/developers", icon: "developer_board"},
+		{ name: "Human-Computer Interaction Experts", route: "/developers", icon: "developer_board"},
+		{ name: "Technical Writers", route: "/developers", icon: "developer_board"},
+		{ name: "Throughout History", route: "/history", icon: "developer_board"},
+	];
+
+	constructor(
+		private iconRegistry: MatIconRegistry,
+		private sanitizer: DomSanitizer
+	) {
+		this.iconRegistry.addSvgIcon(
+			"angular",
+			this.sanitizer.bypassSecurityTrustResourceUrl("/icons/angular.svg")
+		);
+		this.iconRegistry.addSvgIcon(
+			"angular-old",
+			this.sanitizer.bypassSecurityTrustResourceUrl("/icons/angular-old.svg")
+		);
+		this.iconRegistry.addSvgIcon(
+			"angular-material",
+			this.sanitizer.bypassSecurityTrustResourceUrl(
+				"/icons/angular-material.svg"
+			)
+		);
+		this.iconRegistry.addSvgIcon(
+			"primeng",
+			this.sanitizer.bypassSecurityTrustResourceUrl("/icons/primeng.svg")
+		);
+		this.iconRegistry.addSvgIcon(
+			"spartan",
+			this.sanitizer.bypassSecurityTrustResourceUrl("/icons/spartan.svg")
+		);
+		this.iconRegistry.addSvgIcon(
+			"github",
+			this.sanitizer.bypassSecurityTrustResourceUrl("/icons/github.svg")
+		);
+	}
 }

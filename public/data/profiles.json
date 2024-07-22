@@ -1,0 +1,215 @@
+[
+  {
+    "name": "Jane Doe",
+    "image": "https://raw.githubusercontent.com/monacodelisa/images/main/users/sophie-reed.png",
+    "mainUrl": "https://janedoe.dev",
+    "field": "Software Developer",
+    "handsOnCoding": [
+      {
+        "status": true,
+        "inRealTime": true,
+        "platform": "GitHub"
+      }
+    ],
+    "technologies": [
+      {
+        "name": "JavaScript",
+        "icon": "https://example.com/icons/javascript.png"
+      },
+      {
+        "name": "React",
+        "icon": "https://example.com/icons/react.png"
+      }
+    ],
+    "openSource": [
+      {
+        "involvementType": "Maintainer",
+        "contributionType": "Code",
+        "leadDeveloper": true
+      }
+    ],
+    "activities": [
+      {
+        "name": "Open Source Contributor",
+        "icon": "https://example.com/icons/contributor.png"
+      },
+      {
+        "name": "Tech Blogger",
+        "icon": "https://example.com/icons/blogger.png"
+      }
+    ]
+  },
+  {
+    "name": "Elijah Cooper",
+    "image": "https://raw.githubusercontent.com/monacodelisa/images/main/users/elijah-cooper.png",
+    "mainUrl": "https://emilysmith.io",
+    "field": "UX/UI Designer",
+    "handsOnCoding": [
+      {
+        "status": false,
+        "inRealTime": false,
+        "platform": ""
+      }
+    ],
+    "technologies": [
+      {
+        "name": "Figma",
+        "icon": "https://example.com/icons/figma.png"
+      },
+      {
+        "name": "Sketch",
+        "icon": "https://example.com/icons/sketch.png"
+      }
+    ],
+    "openSource": [
+      {
+        "involvementType": "Contributor",
+        "contributionType": "Non-Code",
+        "leadDeveloper": false
+      }
+    ],
+    "activities": [
+      {
+        "name": "Design Workshops",
+        "icon": "https://example.com/icons/workshop.png"
+      },
+      {
+        "name": "User Research",
+        "icon": "https://example.com/icons/research.png"
+      }
+    ]
+  },
+  {
+    "name": "Aisha Khan",
+    "image": "https://raw.githubusercontent.com/monacodelisa/images/main/users/chalotte-bell.png",
+    "mainUrl": "https://aishakhan.dev",
+    "field": "Data Scientist",
+    "handsOnCoding": [
+      {
+        "status": true,
+        "inRealTime": false,
+        "platform": "Kaggle"
+      }
+    ],
+    "technologies": [
+      {
+        "name": "Python",
+        "icon": "https://example.com/icons/python.png"
+      },
+      {
+        "name": "Pandas",
+        "icon": "https://example.com/icons/pandas.png"
+      }
+    ],
+    "activities": [
+      {
+        "name": "Data Science Competitions",
+        "icon": "https://example.com/icons/competition.png"
+      },
+      {
+        "name": "Public Speaking",
+        "icon": "https://example.com/icons/speaking.png"
+      }
+    ]
+  },
+  {
+    "name": "John Doe",
+    "image": "https://raw.githubusercontent.com/monacodelisa/images/main/users/ethan-martinez.png",
+    "mainUrl": "https://janedoe.dev",
+    "field": "Software Developer",
+    "handsOnCoding": [
+      {
+        "status": true,
+        "inRealTime": true,
+        "platform": "GitHub"
+      }
+    ],
+    "technologies": [
+      {
+        "name": "JavaScript",
+        "icon": "https://example.com/icons/javascript.png"
+      },
+      {
+        "name": "Angular",
+        "icon": "https://example.com/icons/angular.png"
+      }
+    ],
+    "activities": [
+      {
+        "name": "Open Source Contributor",
+        "icon": "https://example.com/icons/contributor.png"
+      },
+      {
+        "name": "Tech Blogger",
+        "icon": "https://example.com/icons/blogger.png"
+      }
+    ]
+  },
+  {
+    "name": "Emily Smith",
+    "image": "https://raw.githubusercontent.com/monacodelisa/images/main/users/chalotte-bell.png",
+    "mainUrl": "https://emilysmith.io",
+    "field": "UX/UI Designer",
+    "handsOnCoding": [
+      {
+        "status": false,
+        "inRealTime": false,
+        "platform": ""
+      }
+    ],
+    "technologies": [
+      {
+        "name": "Figma",
+        "icon": "https://example.com/icons/figma.png"
+      },
+      {
+        "name": "Sketch",
+        "icon": "https://example.com/icons/sketch.png"
+      }
+    ],
+    "activities": [
+      {
+        "name": "Design Workshops",
+        "icon": "https://example.com/icons/workshop.png"
+      },
+      {
+        "name": "User Research",
+        "icon": "https://example.com/icons/research.png"
+      }
+    ]
+  },
+  {
+    "name": "Aisha Khan",
+    "image": "https://raw.githubusercontent.com/monacodelisa/images/main/users/chalotte-bell.png",
+    "mainUrl": "https://aishakhan.dev",
+    "field": "Data Scientist",
+    "handsOnCoding": [
+      {
+        "status": true,
+        "inRealTime": false,
+        "platform": "Kaggle"
+      }
+    ],
+    "technologies": [
+      {
+        "name": "Python",
+        "icon": "https://example.com/icons/python.png"
+      },
+      {
+        "name": "Pandas",
+        "icon": "https://example.com/icons/pandas.png"
+      }
+    ],
+    "activities": [
+      {
+        "name": "Data Science Competitions",
+        "icon": "https://example.com/icons/competition.png"
+      },
+      {
+        "name": "Public Speaking",
+        "icon": "https://example.com/icons/speaking.png"
+      }
+    ]
+  }
+]
+

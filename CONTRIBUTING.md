@@ -78,7 +78,7 @@ If the chosen issue has already been resolved - no further PRs would be accepted
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-1. Search [TechSHowcase](https://github.com/TechShowcase/techshwocase/pulls) for an open or closed PR that relates to your submission.
+1. Search [TechShowcase](https://github.com/TechShowcase/techshowcase/pulls) for an open or closed PR that relates to your submission.
    You don't want to duplicate existing efforts.
 
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.

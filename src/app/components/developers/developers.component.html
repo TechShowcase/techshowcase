@@ -1,0 +1,68 @@
+<div class="content">
+  <div class="filtering">
+    <div class="filtering-actions">
+      <mat-form-field>
+        <mat-label>Technologies</mat-label>
+        <mat-select [(ngModel)]="selectedTech" multiple  (selectionChange)="applyFilter()">
+          @for (tech of technologies; track tech) {
+          <mat-option value="{{tech}}">{{tech}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <div class="buttons-wrapper">
+        <div class="checkboxes-wrapper">
+          <mat-checkbox [(ngModel)]="showHandsOnCoding" (change)="applyFilter()">Hands-on Coding</mat-checkbox>
+        </div>
+        <button mat-raised-button (click)="clearFilters()"> Clear Filters</button>
+      </div>
+    </div>
+    <div class="total">
+      @if (!filterApplied) {
+      <p>All Profiles: {{profiles.length}}</p>
+      } @else {
+      <p>Profiles found: {{filteredProfiles.length}}</p>
+      }
+    </div>
+  </div>
+  <div class="cards-wrapper">
+
+    @if (!filterApplied) {
+    @for (profile of profiles; track profile){
+    <a href="{{profile.mainUrl}}?source=techshowcase.dev" target="_blank">
+      <mat-card class="home">
+        <mat-card-content>
+          <div class="main">
+            <img mat-card-image src="{{profile.image}}" alt="{{profile.name}}">
+            <div class="info">
+              <h2>{{profile.name}}</h2>
+              <h3>{{profile.field}}</h3>
+            </div>
+          </div>
+          <div class="details">
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </a>
+    }
+    } @else {
+    @for (profile of filteredProfiles; track profile){
+    <a href="{{profile.mainUrl}}?source=techshowcase.dev" target="_blank">
+      <mat-card class="home">
+        <mat-card-content>
+          <div class="main">
+            <img mat-card-image src="{{profile.image}}" alt="{{profile.name}}">
+            <div class="info">
+              <h2>{{profile.name}}</h2>
+              <h3>{{profile.field}}</h3>
+            </div>
+          </div>
+          <div class="details">
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </a>
+    }
+    }
+  </div>
+</div>
+
