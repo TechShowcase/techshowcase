@@ -1,0 +1,47 @@
+mat-toolbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+
+  .toolbar-middle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 3;
+    gap: 0.6rem;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      img {
+        width: 7rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+      }
+    }
+
+    .title {
+
+      h3 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  mat-toolbar {
+    height: 6.5rem;
+
+    .toolbar-middle {
+      flex-direction: column;
+    }
+  }
+}

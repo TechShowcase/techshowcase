@@ -1,0 +1,78 @@
+<div class="content">
+  <div class="filtering">
+    <div class="filtering-actions">
+      <mat-form-field>
+        <mat-label>Involvement Type</mat-label>
+        <mat-select [(ngModel)]="selectedInvolvementType" (selectionChange)="applyFilter()">
+          @for (involvement of involvementType; track involvement) {
+          <mat-option value="{{involvement}}">{{involvement}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Contribution Type</mat-label>
+        <mat-select [(ngModel)]="selectedContributionType" (selectionChange)="applyFilter()">
+          @for (contribution of contributionType; track contribution) {
+          <mat-option value="{{contribution}}">{{contribution}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <div class="buttons-wrapper">
+        @if(selectedContributionType === 'Code') {
+        <div class="checkboxes-wrapper">
+          <mat-checkbox [(ngModel)]="leadDeveloper" matTooltip="Maintainers or contributors that drive the project forward by writing the majority of the code." matTooltipPosition="above" (change)="applyFilter()">Lead Developer</mat-checkbox>
+        </div>
+      }
+        <button mat-raised-button (click)="clearFilters()"> Clear Filters</button>
+      </div>
+    </div>
+    <div class="total">
+      @if (!filterApplied) {
+      <p>All Profiles: {{profiles.length}}</p>
+      } @else {
+      <p>Profiles found: {{filteredProfiles.length}}</p>
+      }
+    </div>
+  </div>
+  <div class="cards-wrapper">
+
+    @if (!filterApplied) {
+    @for (profile of profiles; track profile){
+    <a href="{{profile.mainUrl}}?source=techshowcase.dev" target="_blank">
+      <mat-card class="home">
+        <mat-card-content>
+          <div class="main">
+            <img mat-card-image src="{{profile.image}}" alt="{{profile.name}}">
+            <div class="info">
+              <h2>{{profile.name}}</h2>
+              <h3>{{profile.field}}</h3>
+            </div>
+          </div>
+          <div class="details">
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </a>
+    }
+    } @else {
+    @for (profile of filteredProfiles; track profile){
+    <a href="{{profile.mainUrl}}?source=techshowcase.dev" target="_blank">
+      <mat-card class="home">
+        <mat-card-content>
+          <div class="main">
+            <img mat-card-image src="{{profile.image}}" alt="{{profile.name}}">
+            <div class="info">
+              <h2>{{profile.name}}</h2>
+              <h3>{{profile.field}}</h3>
+            </div>
+          </div>
+          <div class="details">
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </a>
+    }
+    }
+  </div>
+</div>
+

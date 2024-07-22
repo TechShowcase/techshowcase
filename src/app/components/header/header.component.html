@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <button mat-icon-button (click)="onToggleSidenav()"><mat-icon>menu</mat-icon></button>
+  <div class="toolbar-middle">
+    <div class="logo">
+      <a routerLink="/">
+        <img src="/images/branding/logo-narrow.png" alt="women-in-tech-logo">
+      </a>
+    </div>
+    <div class="title">
+      <h3>{{title}}</h3>
+    </div>
+  </div>
+  <div class="toolbar-end controls">
+    <div class="theme-control">
+      <mat-slide-toggle checked (click)="toggleTheme()"></mat-slide-toggle>
+    </div>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,25 @@
+:host {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  z-index: 2;
+
+  .info {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    a {
+      font-weight: 500;
+      text-transform: uppercase;
+
+      mat-icon {
+        font-size: 1.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+  }
+}

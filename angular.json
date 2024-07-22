@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "techshwocase": {
+    "techshowcase": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -26,8 +26,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/theme.scss",
@@ -63,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "techshwocase:build:production"
+              "buildTarget": "techshowcase:build:production"
             },
             "development": {
-              "buildTarget": "techshwocase:build:development"
+              "buildTarget": "techshowcase:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "techshwocase:build"
+            "buildTarget": "techshowcase:build"
           }
         },
         "test": {
@@ -87,8 +89,10 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/theme.scss",
@@ -101,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "0d840cab-8773-4a87-ac3c-d544b46e06e2"
+    "analytics": "03ebfadb-9c34-4c65-b1fb-079b1d64052c"
   }
 }

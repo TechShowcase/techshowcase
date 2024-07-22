@@ -1,52 +1,29 @@
-<div class="container" [class]="themeService.themeSignal()">
-  <mat-toolbar class="header">
-    <a class="logo" routerLink="/">
-      @if (themeService.themeSignal() === 'dark') {
-      <img src="../assets/images/tech-showcase-purple.png" alt="">
-      } @else {
-      <img src="../assets/images/tech-showcase.png" alt="">
-      }
-    </a>
-    <mat-slide-toggle checked (click)="toggleTheme()"></mat-slide-toggle>
-  </mat-toolbar>
-  <main>
-    <div class="cards-wrapper">
-      @for (card of cards; track card) {
-      <a href="{{card.url}}" target="_blank">
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>{{card.title}}</mat-card-title>
-            <mat-card-subtitle>{{card.subTitle}}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <img mat-card-image class="{{card.imgClass}}" src="{{card.imageSrc}}" alt="{{card.title}} logo">
-          </mat-card-content>
-        </mat-card>
-      </a>
-      }
-      <a href="https://builtwithangular.dev" target="_blank">
-        <mat-card class="small">
-          <mat-card-header>
-            <mat-card-title>Built with Angular</mat-card-title>
-            <mat-card-subtitle>Personal Resource</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <img mat-card-image class="angular-logo" src="../assets/images/angular-gradient.png" alt="angular logo">
-          </mat-card-content>
-        </mat-card>
-      </a>
-    </div>
-  </main>
-  <mat-toolbar class="footer">
-    <small>open source</small>
-    <div class="social">
-      <a href="https://github.com/TechShowcase" target="_blank">
-        <mat-icon svgIcon="github"></mat-icon>
-      </a>
-      <a href="https://x.com/techshowcase_" target="_blank">
-        <mat-icon svgIcon="twitter"></mat-icon>
-      </a>
-    </div>
-    <small>techshowcase.dev</small>
-  </mat-toolbar>
+<div [class]="themeService.themeSignal()">
+  <app-header (toggleSidenav)="snav.toggle()"></app-header>
+  <mat-sidenav-container>
+    <mat-sidenav #snav [mode]="'over'">
+      <mat-nav-list>
+        @for (nav of navItems; track nav) {
+        <a mat-list-item routerLink="{{nav.route}}" (click)="snav.toggle()">{{nav.name}}</a>
+        }
+      </mat-nav-list>
+      <mat-divider></mat-divider>
+      <div class="links">
+        <a href="https://womenintech.dev/" target="_blank">
+          <mat-card>
+            <img src="/images/women-in-tech-logo.jpg" alt="">
+          </mat-card>
+        </a>
+        <a href="https://builtwithanalog.dev/" target="_blank">
+          <mat-card>
+            <img src="/images/builtwithanalog.jpg" alt="">
+          </mat-card>
+        </a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <app-footer></app-footer>
 </div>
