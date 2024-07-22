@@ -81,5 +81,13 @@ export class AppComponent {
 			"github",
 			this.sanitizer.bypassSecurityTrustResourceUrl("/icons/github.svg")
 		);
+		this.iconRegistry.addSvgIcon(
+			"linkedin",
+			this.sanitizer.bypassSecurityTrustResourceUrl("/icons/linkedin.svg")
+		);
+		this.iconRegistry.addSvgIcon(
+			"twitter",
+			this.sanitizer.bypassSecurityTrustResourceUrl("/icons/twitter.svg")
+		);
 	}
 }
