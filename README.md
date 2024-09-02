@@ -2,7 +2,7 @@
 
 ![TechShowcase](/public/images/branding/logo-narrow.png)
 
-This repository holds the code for [techchowcase.dev](https://techshowcase.dev), an open-source website dedicated to showcasing and celebrating women in various tech roles.
+This repository holds the code for [techchowcase.dev](https://techshowcase.dev), an open-source website dedicated to showcasing and celebrating individuals in various tech roles.
 
 ## About
 
